@@ -65,7 +65,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<bool> isGuest() async {
     bool? isguest = await localApi.userModel.isGuest;
-    return isguest!;
+    return isguest;
   }
 
   void googleSignIn() async {

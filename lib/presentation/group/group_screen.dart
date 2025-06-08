@@ -400,7 +400,7 @@ class _GroupScreenState extends State<GroupScreen>
       beacon: beacon,
       onDelete: () async {
         bool? value = await GroupWidgetUtils.deleteDialog(context);
-        if (value == null || !value) {
+        if (!value) {
           return;
         }
         await _groupCubit.deleteBeacon(beacon);
