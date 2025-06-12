@@ -63,7 +63,7 @@ class AuthCubit extends Cubit<AuthState> {
     FocusScope.of(context).requestFocus(focusNode);
   }
 
-  Future<bool> isGuest() async {
+  Future<bool?> isGuest() async {
     bool? isguest = await localApi.userModel.isGuest;
     return isguest;
   }
