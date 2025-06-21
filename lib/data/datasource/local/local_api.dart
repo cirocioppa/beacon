@@ -107,15 +107,13 @@ class LocalApi {
   Future<bool?> userloggedIn() async {
     try {
       UserModel? user = await userBox.get('currentUser');
-      
-      if (user != null) {
-        _userModel = user;
-        return true;
-      }
-      else {
+
+      //_userModel = user;
+      if (user == null || user.authToken == null) {
         return false;
-      }
-    } catch (e) {
+      };
+      return true;
+        } catch (e) {
       log(e.toString());
       return false;
     }

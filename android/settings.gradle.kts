@@ -16,9 +16,9 @@ pluginManagement {
     }
 }
 plugins {
-    id("dev.flutter.flutter-plugin-loader")
     id("com.android.application") 
     id("org.jetbrains.kotlin.android")
+    id("dev.flutter.flutter-plugin-loader")
 }
 /* 
 plugins {
